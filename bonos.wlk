@@ -6,7 +6,7 @@ object bonoPorcentaje {
 
 // bono por resultados de monto fijo
 object bonoMontoFijo {
-	method monto() { return  800 }
+	method monto(empleado) { return  800 }
 }
 
 
