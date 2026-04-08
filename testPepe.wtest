@@ -15,6 +15,29 @@ describe "sueldo pepe" {
 		
 		assert.equals(20000 + 800 + 0, pepe.sueldo())
 	}
+	test "Test inicial 2" {
+		pepe.setCategoria(gerente)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoNulo)
+		
+		assert.equals(15000 + 1500 + 0, pepe.sueldo())
+	}
+	test "Test inicial 3" {
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
+		pepe.setCantidadDeFaltas(0)
+		
+		assert.equals(20000 + 2000 + 2000, pepe.sueldo())
+	}
+	test "Test inicial 4" {
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
+		pepe.setCantidadDeFaltas(1)
+		
+		assert.equals(20000 + 2000  + 1000 , pepe.sueldo())
+	}
 
 	
 }
