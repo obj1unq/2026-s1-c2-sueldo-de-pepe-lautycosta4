@@ -31,7 +31,7 @@ object vendedor {
 object medioTiempo{
 	var categoriaBase= gerente
 
-	method categoriaBase(_categoria) { categoriaBase=_categoria }
+	method setCategoriaBase(_categoria) { categoriaBase=_categoria }
 
 	method neto() { return categoriaBase.neto() / 2 }
 

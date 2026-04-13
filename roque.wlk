@@ -6,7 +6,7 @@ import categorias.*
 import bonos.*
 
 object roque {
-	var neto = 28000
+	const neto = 28000
 	var bonoResultado = bonoNulo
 	
     method bonoResultado(){ return bonoResultado }
