@@ -16,23 +16,16 @@ object pepe {
 	{ bonoResultado = _bonoResultado }
 	
 	method setBonoPresentismo(_bonoPresentismo) 
-	{ bonoPresentismo = _bonoPresentismo }
+	{ bonoPresentismo = _bonoPresentismo } 
 
 	method setCantidadDeFaltas(_cantidadDeFaltas) 
 	{ cantidadDeFaltas = _cantidadDeFaltas }
-	// faltan los métodos para poder cambiar la categoria, el bono por presentismo,
-	// el bono por resultados y la cantidad de faltas de Pepe. 
 	
 	method sueldoNeto() { return categoria.neto() }
 	method sueldo() {
-		return self.sueldoNeto() 
-			/* + el bono por presentismo */
+		return self.sueldoNeto()
 			+ bonoPresentismo.monto(self)
-			/* + el bono por resultado */
-			+ bonoResultado.monto(self)
-		/* notar que todos los bonos entienden el mensaje monto(empleado)
-		 * en este caso ¿quién es el empleado?
-		 */ 
+			+ bonoResultado.monto(self) 
 	}
 	
 }
